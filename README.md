@@ -1,23 +1,31 @@
-# Casa Manto — demo toelettatura
+# Casa Manto — demo statica toelettatura
 
-Due pagine indipendenti, da aprire sul telefono per il Reel.
+Due pagine HTML, senza Next.js. Cartella da pubblicare: `static/`.
 
-- **Lato cliente:** `/demo/toelettatura`
-- **Lato salone (agenda):** `/gestionale-toelettatura`
-- Contenuti da programmare: `/contenuti`
+- **Lato cliente:** `/` (`static/index.html`)
+- **Lato salone (agenda):** `/agenda.html`
+
+Le prenotazioni restano nel browser (`localStorage`) e compaiono in agenda.
 
 ## Locale
 
 ```bash
-npm install
-npm run dev
+npx --yes serve static -l 4173
 ```
 
-Apri `http://localhost:3000/demo/toelettatura`.
+Apri `http://localhost:4173/` e `http://localhost:4173/agenda.html`.
 
-## Render
+## Render — sito statico
 
-Blueprint: `render.yaml`. Dopo il primo deploy i link da passare a ChatGPT sono:
+Crea uno **Static Site**, non un Web Service.
 
-- `https://<servizio>.onrender.com/demo/toelettatura`
-- `https://<servizio>.onrender.com/gestionale-toelettatura`
+| Campo | Valore |
+|---|---|
+| Branch | `main` |
+| Build Command | lascia vuoto |
+| **Publish Directory** | `static` |
+
+Link da passare a ChatGPT:
+
+- `https://<sito>.onrender.com/` — lato cliente
+- `https://<sito>.onrender.com/agenda.html` — agenda del salone

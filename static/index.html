@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casa Manto · lato cliente</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body data-page="client">
+  <div class="bar bar-client">
+    <span class="badge badge-gold">Lato cliente</span>
+    <a class="link" href="agenda.html">Passa all'agenda</a>
+  </div>
+
+  <header class="hero">
+    <img src="img/hero.jpg" alt="Barboncino in salone, appena tosato" />
+    <div class="chip">
+      <svg class="icon icon-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 8.6 20 20M20 4 8.6 15.4"/></svg>
+      <div>
+        <strong>Toelettatura Casa Manto</strong>
+        <span>Via Savona 18 · Mar–Sab 9–18:30</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="story">
+      <p class="kicker" style="color:#fde68a">Via Savona 18, Milano · Mar–Sab 9:00–18:30</p>
+      <h2>Blocca l'orario di Teo. Smetti di cercarlo in chat.</h2>
+      <p>Scegli servizio e taglia, conferma: il posto si tiene da solo. Un bagno breve non occupa la postazione di uno stripping.</p>
+    </div>
+
+    <section class="card" id="prenota">
+      <div class="row">
+        <div>
+          <p class="kicker">Casa Manto · prenota</p>
+          <h1>Blocca l'orario di Teo</h1>
+        </div>
+        <span class="pill">Anche chiuso</span>
+      </div>
+
+      <form id="form">
+        <label>Taglia</label>
+        <div class="grid-3" id="sizes"></div>
+        <label>Servizio</label>
+        <select class="field" id="service"></select>
+        <label>Orario</label>
+        <div class="grid-2" id="slots"></div>
+        <div class="grid-2" style="margin-top:10px">
+          <input class="field" id="pet" placeholder="Teo, barboncino" />
+          <input class="field" id="phone" placeholder="WhatsApp" />
+        </div>
+        <button class="cta" type="submit">Conferma e tienilo</button>
+      </form>
+
+      <div id="done" class="ok hidden">
+        <h3>Posto bloccato. Ora aprilo in agenda.</h3>
+        <div class="wa"><strong>WhatsApp</strong><p id="wa-text"></p></div>
+        <a class="cta cta-dark" href="agenda.html">Apri l'agenda: la riga è già lì</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="services">
+    <p class="kicker">Scegli il servizio e prenota</p>
+    <h2>Quattro lavori. Tocca e blocca l'orario.</h2>
+    <div class="catalog" id="catalog"></div>
+  </section>
+  <script src="js/app.js"></script>
+</body>
+</html>
