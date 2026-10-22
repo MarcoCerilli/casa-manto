@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Casa Manto · lato cliente</title>
-  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="/css/app.css" />
 </head>
 <body data-page="client">
   <div class="bar bar-client">
     <span class="badge badge-gold">Lato cliente</span>
-    <a class="link" href="agenda.html">Passa all'agenda</a>
+    <a class="link" href="/agenda.html">Passa all'agenda</a>
   </div>
 
   <header class="hero">
-    <img src="img/hero.jpg" alt="Barboncino in salone, appena tosato" />
+    <img src="/img/copertina.jpg" alt="Barboncino in salone, appena tosato" />
     <div class="chip">
       <svg class="icon icon-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 8.6 20 20M20 4 8.6 15.4"/></svg>
       <div>
@@ -41,11 +41,25 @@
 
       <form id="form">
         <label>Taglia</label>
-        <div class="grid-3" id="sizes"></div>
+        <div class="grid-3" id="sizes">
+          <button type="button" class="choice">Piccola</button>
+          <button type="button" class="choice on">Media</button>
+          <button type="button" class="choice">Grande</button>
+        </div>
         <label>Servizio</label>
-        <select class="field" id="service"></select>
+        <select class="field" id="service">
+          <option value="Bagno e asciugatura">Bagno e asciugatura (50 min · 38 €)</option>
+          <option value="Tosatura completa" selected>Tosatura completa (100 min · 65 €)</option>
+          <option value="Stripping">Stripping (120 min · 80 €)</option>
+          <option value="Unghie, orecchie e igiene">Unghie, orecchie e igiene (25 min · 22 €)</option>
+        </select>
         <label>Orario</label>
-        <div class="grid-2" id="slots"></div>
+        <div class="grid-2" id="slots">
+          <button type="button" class="choice on">Oggi ore 15:00</button>
+          <button type="button" class="choice">Domani ore 10:30</button>
+          <button type="button" class="choice">Giovedì ore 11:00</button>
+          <button type="button" class="choice">Sabato ore 09:00</button>
+        </div>
         <div class="grid-2" style="margin-top:10px">
           <input class="field" id="pet" placeholder="Teo, barboncino" />
           <input class="field" id="phone" placeholder="WhatsApp" />
@@ -56,7 +70,7 @@
       <div id="done" class="ok hidden">
         <h3>Posto bloccato. Ora aprilo in agenda.</h3>
         <div class="wa"><strong>WhatsApp</strong><p id="wa-text"></p></div>
-        <a class="cta cta-dark" href="agenda.html">Apri l'agenda: la riga è già lì</a>
+        <a class="cta cta-dark" href="/agenda.html">Apri l'agenda: la riga è già lì</a>
       </div>
     </section>
   </div>
@@ -64,8 +78,45 @@
   <section class="services">
     <p class="kicker">Scegli il servizio e prenota</p>
     <h2>Quattro lavori. Tocca e blocca l'orario.</h2>
-    <div class="catalog" id="catalog"></div>
+    <div class="catalog" id="catalog">
+      <button type="button" class="service" data-service="Bagno e asciugatura">
+        <img src="/img/bagno.jpg" alt="Bagno e asciugatura" />
+        <div>
+          <span class="pill">50 min</span>
+          <h3>Bagno e asciugatura</h3>
+          <p class="desc">Lavaggio, asciugatura e spazzolatura.</p>
+          <p class="price">38 €</p>
+        </div>
+      </button>
+      <button type="button" class="service" data-service="Tosatura completa">
+        <img src="/img/tosatura.jpg" alt="Tosatura completa" />
+        <div>
+          <span class="pill">100 min</span>
+          <h3>Tosatura completa</h3>
+          <p class="desc">Bagno e taglio secondo razza o lunghezza.</p>
+          <p class="price">65 €</p>
+        </div>
+      </button>
+      <button type="button" class="service" data-service="Stripping">
+        <img src="/img/a-mano.jpg" alt="Stripping a mano" />
+        <div>
+          <span class="pill">120 min</span>
+          <h3>Stripping</h3>
+          <p class="desc">Lavorazione a mano per manti ruvidi.</p>
+          <p class="price">80 €</p>
+        </div>
+      </button>
+      <button type="button" class="service" data-service="Unghie, orecchie e igiene">
+        <img src="/img/unghie.jpg" alt="Unghie, orecchie e igiene" />
+        <div>
+          <span class="pill">25 min</span>
+          <h3>Unghie, orecchie e igiene</h3>
+          <p class="desc">Intervento breve tra un taglio e l'altro.</p>
+          <p class="price">22 €</p>
+        </div>
+      </button>
+    </div>
   </section>
-  <script src="js/app.js"></script>
+  <script src="/prenota.js"></script>
 </body>
 </html>

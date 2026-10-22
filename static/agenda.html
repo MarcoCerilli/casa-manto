@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Casa Manto · lato salone</title>
-  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="/css/app.css" />
 </head>
 <body class="salon" data-page="agenda">
   <header class="bar bar-salon">
     <span class="badge badge-teal">Lato salone</span>
-    <a class="link" href="index.html" style="color:#0f766e">Apri il sito cliente →</a>
+    <a class="link" href="/" style="color:#0f766e">Apri il sito cliente →</a>
   </header>
 
   <div class="salon-head">
@@ -43,7 +43,42 @@
         <button data-station="Tosatura">Tosatura</button>
         <button data-station="Finishing">Finishing</button>
       </div>
-      <div id="lanes"></div>
+      <div id="lanes">
+        <section class="lane">
+          <h3>Vasca<span>2 in coda</span></h3>
+          <article class="job">
+            <div class="top"><strong>Lola (Maltese)</strong><time>09:00–09:50</time></div>
+            <div class="meta">Bagno e asciugatura · Piccola</div>
+            <div class="bot"><span>Confermato WhatsApp</span><strong>38 €</strong></div>
+          </article>
+          <article class="job">
+            <div class="top"><strong>Otto (Labrador)</strong><time>15:00–16:10</time></div>
+            <div class="meta">Bagno e asciugatura · Grande</div>
+            <div class="bot"><span>Confermato WhatsApp</span><strong>48 €</strong></div>
+          </article>
+        </section>
+        <section class="lane">
+          <h3>Tosatura<span>2 in coda</span></h3>
+          <article class="job">
+            <div class="top"><strong>Teo (Barboncino)</strong><time>09:30–11:10</time></div>
+            <div class="meta">Tosatura completa · Media</div>
+            <div class="bot"><span>Confermato WhatsApp</span><strong>65 €</strong></div>
+          </article>
+          <article class="job">
+            <div class="top"><strong>Iris (Jack Russell)</strong><time>11:30–13:30</time></div>
+            <div class="meta">Stripping · Piccola</div>
+            <div class="bot"><span>In arrivo</span><strong>80 €</strong></div>
+          </article>
+        </section>
+        <section class="lane">
+          <h3>Finishing<span>1 in coda</span></h3>
+          <article class="job">
+            <div class="top"><strong>Nina (Barboncino toy)</strong><time>11:15–11:45</time></div>
+            <div class="meta">Finishing e fiocco · Piccola</div>
+            <div class="bot"><span>Confermato WhatsApp</span><strong>25 €</strong></div>
+          </article>
+        </section>
+      </div>
     </div>
 
     <div id="view-richiami" class="hidden">
@@ -55,7 +90,20 @@
           </div>
           <button class="cta-teal" id="recall-all" type="button">Mandali tutti su WhatsApp</button>
         </div>
-        <ul id="recall-list"></ul>
+        <ul id="recall-list">
+          <li>
+            <div><strong>Birba (Volpino)</strong><div class="meta">Giulia Fontana · +39 335 900 1122 · Manto a 7 settimane</div></div>
+            <div><span class="meta">Da scrivere</span> <button class="cta-teal" data-i="0">Scrivi ora</button></div>
+          </li>
+          <li>
+            <div><strong>Ciro (Barboncino)</strong><div class="meta">Davide Riva · +39 348 333 2210 · Manto a 8 settimane</div></div>
+            <div><span class="meta">Da scrivere</span> <button class="cta-teal" data-i="1">Scrivi ora</button></div>
+          </li>
+          <li>
+            <div><strong>Peggy (Westie)</strong><div class="meta">Anna Berri · +39 331 556 7788 · Stripping in scadenza</div></div>
+            <div><span class="meta">Da scrivere</span> <button class="cta-teal" data-i="2">Scrivi ora</button></div>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -84,6 +132,6 @@
       </form>
     </div>
   </main>
-  <script src="js/app.js"></script>
+  <script src="/prenota.js"></script>
 </body>
 </html>
